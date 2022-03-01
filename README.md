@@ -1,2 +1,2 @@
 # bombhook
-A project to play bombparty in the most efficient way possible
+A project to play bombparty (https://jklm.fun/) in the most efficient way possible
