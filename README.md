@@ -20,6 +20,9 @@ me
 
 ## Credits/Special Thanks
 Glizzy Mentality/Isaac for giving me the idea on how to handle repeated words and failed attempts
+
 Me for coding this
+
 You for checking this out 
+
 thats it tbh
