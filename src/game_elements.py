@@ -86,22 +86,22 @@ def play(driver, wl):
     syllable = "BRUHBRUHBRUHTHISWILLBRUHBRUHBRUH"
 
     while True:
-        if syllable != get_syllable(driver):
+        selfturn = your_turn(driver)
+        while selfturn == True:
             syllable = get_syllable(driver)
             print(f"The current syllable is {syllable}.")
             usable_words = find_usable_words(driver, wordlist)
             best_word = find_best_word(usable_words, unused_letters)
             print(best_word)
 
-        selfturn = your_turn(driver)
-        while selfturn == True:
+
             input_box_xpath = "/html/body/div[2]/div[3]/div[2]/div[2]/form/input"
 
             input_box = driver.find_element(By.XPATH, input_box_xpath)
             input_box.send_keys(best_word)
-            time.sleep(0.1)
+            time.sleep(0.05)
             input_box.send_keys(Keys.RETURN)
-            time.sleep(0.4)
+            time.sleep(0.35)
 
             index = 0
             for i in wordlist:
@@ -112,9 +112,9 @@ def play(driver, wl):
                 index += 1
             selfturn = your_turn(driver)
 
-        for letter in unused_letters:
-            if letter in best_word:
-                unused_letters.remove(letter)
+            for letter in unused_letters:
+                if letter in best_word:
+                    unused_letters.remove(letter)
 
 
 
