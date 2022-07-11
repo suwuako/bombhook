@@ -30,6 +30,8 @@ me
 ## Credits/Special Thanks
 Glizzy Mentality/Isaac for giving me the idea on how to handle repeated words and failed attempts
 
+the Guilty Gear OST that i listened to while i coded
+
 Me for coding this
 
 You for checking this out 
