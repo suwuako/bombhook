@@ -32,6 +32,10 @@ Interested in this project? Contact me on discord @suwa#2340
 3. git clone this repo
 4. cd to this repo and `python main.py` 
 
+## License
+
+gnu gpl 3 
+
 ## Contributors
 
 me
