@@ -8,6 +8,7 @@ Interested in this project? Contact me on discord @suwa#2340
 ## Dependencies
 
  - selenium 
+ - maybe firefox? idk geckodrivers included but you probably still need firefox installed can someone test it without having firefox installed ty xx
  - thats it
 
 ## Demos
