@@ -17,6 +17,8 @@ Interested in this project? Contact me on discord @suwa#2340
 - read rules of the game
 - improve algorythm so that once max lives are reached it uses shorter words 
 - fix a nasty workaround where opponent's inputs cant be read so it instead checks if your input fails 
+- tell when the game ends and reset to tui
+- maybe add gui?
 - idk dm me if u have any ideas
 
 ## Demos
