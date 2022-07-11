@@ -4,6 +4,7 @@
 Interested in this project? Contact me on discord @suwa#2340
 
 <img src="https://cdn.discordapp.com/attachments/879261281473937451/996136411742871572/demo.gif">
+
 ## Dependencies
 
  - selenium 
