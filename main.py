@@ -1,8 +1,10 @@
 import pathlib
 import sys
+import asyncio
+
+import src.tui as tui
 
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.service import Service
 
 
@@ -24,10 +26,9 @@ class start():
         self.driver = webdriver.Firefox(service=Service(driver))
 
     def run(self):
-        self.driver.get("https://jklm.fun/")
-        # Wait for user to join game room
-        input("Press enter after selecting your game room: ")
-
+        tui.load_room(self.driver)
+        tui.in_game(self.driver)
+        tui.playing_game(self.driver)
 
 
 if __name__ == "__main__":
