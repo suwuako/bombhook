@@ -9,11 +9,19 @@ Interested in this project? Contact me on discord @suwa#2340
 
  - selenium 
  - maybe firefox? idk geckodrivers included but you probably still need firefox installed can someone test it without having firefox installed ty xx
+ - python
  - thats it
 
 ## Demos
 
 <a href="https://www.youtube.com/watch?v=9OiR680KXfU">1 -> 10 lives in 1 minute<a>
+
+## How to run for complete newbies
+
+1. install python & add to path
+2. open a terminal of your choice and pip install selenium
+3. git clone this repo
+4. cd to this repo and `python main.py` 
 
 ## Contributors
 
