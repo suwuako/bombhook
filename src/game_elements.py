@@ -94,14 +94,14 @@ def play(driver, wl):
             print(best_word)
 
         selfturn = your_turn(driver)
-        if selfturn == True:
+        while selfturn == True:
             input_box_xpath = "/html/body/div[2]/div[3]/div[2]/div[2]/form/input"
 
             input_box = driver.find_element(By.XPATH, input_box_xpath)
             input_box.send_keys(best_word)
-            time.sleep(0.05)
+            time.sleep(0.1)
             input_box.send_keys(Keys.RETURN)
-            time.sleep(0.3)
+            time.sleep(0.4)
 
             index = 0
             for i in wordlist:
@@ -110,13 +110,13 @@ def play(driver, wl):
                     wordlist.pop(index)
 
                 index += 1
+            selfturn = your_turn(driver)
 
-            for letter in unused_letters:
-                if letter in best_word:
-                    unused_letters.remove(letter)
+        for letter in unused_letters:
+            if letter in best_word:
+                unused_letters.remove(letter)
 
-        else:
-            pass
+
 
         if unused_letters == []:
             unused_letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
