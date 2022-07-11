@@ -12,7 +12,7 @@ Interested in this project? Contact me on discord @suwa#2340
 
 ## Demos
 
-<a href="https://www.youtube.com/watch?v=9OiR680KXfU">Click me<a>
+<a href="https://www.youtube.com/watch?v=9OiR680KXfU">1 -> 10 lives in 1 minute<a>
 
 ## Contributors
 
