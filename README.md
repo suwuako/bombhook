@@ -8,15 +8,22 @@ Interested in this project? Contact me on discord @suwa#2340
 ## Dependencies
 
  - selenium 
- - maybe firefox? idk geckodrivers included but you probably still need firefox installed can someone test it without having firefox installed ty xx
+ - firefox
  - python
  - thats it
+
+## TODO
+- legit mode
+- read rules of the game
+- improve algorythm so that once max lives are reached it uses shorter words 
+- fix a nasty workaround where opponent's inputs cant be read so it instead checks if your input fails 
+- idk dm me if u have any ideas
 
 ## Demos
 
 <a href="https://www.youtube.com/watch?v=9OiR680KXfU">1 -> 10 lives in 1 minute<a>
 
-## How to run for complete newbies
+## How to run for complete dummies
 
 1. install python & add to path
 2. open a terminal of your choice and pip install selenium
