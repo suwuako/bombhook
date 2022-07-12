@@ -11,6 +11,7 @@ Interested in this project? Contact me on discord @suwa#2340
  - thats it
 
 ## TODO
+~~- check if it works for windows & linux~~
 - legit mode - current WIP
 - read full rules of the game
 - improve algorythm so that once max lives are reached it uses shorter words 
