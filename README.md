@@ -11,8 +11,8 @@ Interested in this project? Contact me on discord @suwa#2340
  - thats it
 
 ## TODO
-- legit mode
-- read rules of the game
+- legit mode - current WIP
+- read full rules of the game
 - improve algorythm so that once max lives are reached it uses shorter words 
 - fix a nasty workaround where opponent's inputs cant be read so it instead checks if your input fails 
 - tell when the game ends and reset to tui or smthn
