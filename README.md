@@ -8,8 +8,6 @@ Interested in this project? Contact me on discord @suwa#2340
 ## Dependencies
 
  - selenium 
- - firefox
- - python
  - thats it
 
 ## TODO
