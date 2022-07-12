@@ -33,7 +33,7 @@ gnu gpl 3
 me
 
 ## Credits/Special Thanks
-Glizzy Mentality/Isaac for giving me the idea on how to handle repeated words and failed attempts
+Isaac for giving me the idea on how to handle repeated words and failed attempts
 
 the Guilty Gear strive OST that i listened to while i coded
 
