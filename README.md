@@ -17,20 +17,14 @@ Interested in this project? Contact me on discord @suwa#2340
 - read rules of the game
 - improve algorythm so that once max lives are reached it uses shorter words 
 - fix a nasty workaround where opponent's inputs cant be read so it instead checks if your input fails 
-- tell when the game ends and reset to tui
+- tell when the game ends and reset to tui or smthn
+- improve angorithm to give points to letters to instead prioritse higher ranked letters which might be less common such as (x, z) 
 - maybe add gui?
 - idk dm me if u have any ideas
 
 ## Demos
 
 <a href="https://www.youtube.com/watch?v=9OiR680KXfU">1 -> 10 lives in 1 minute<a>
-
-## How to run for complete dummies
-
-1. install python & add to path
-2. open a terminal of your choice and pip install selenium
-3. git clone this repo
-4. cd to this repo and `python main.py` 
 
 ## License
 
