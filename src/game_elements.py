@@ -66,8 +66,7 @@ def find_best_word(usable_words, unused_letters):
         if len(letters) >= highest_letter_len:
             best_words.append(word)
 
-    print(f"The best word(s) we can use is {best_words} with {highest_letter_len} letters")
-    return random.choice(best_words)
+    return best_words[0]
 
 def find_usable_words(driver, wordlist):
     usable_words = []
@@ -78,7 +77,29 @@ def find_usable_words(driver, wordlist):
 
     return usable_words
 
+def write_input(driver, word, mode):
+    input_box_xpath = "/html/body/div[2]/div[3]/div[2]/div[2]/form/input"
+    input_box = driver.find_element(By.XPATH, input_box_xpath)
+
+    if mode == "rage":
+        input_box.send_keys(word)
+        time.sleep(0.05)
+        input_box.send_keys(Keys.RETURN)
+        time.sleep(0.35)
+        return
+
+    elif mode == "legit":
+        for letter in word:
+            input_box.send_keys(letter)
+            waittime = random.randint(10000,20000) * 0.00001
+
+            time.sleep(waittime)
+        input_box.send_keys(Keys.RETURN)
+        time.sleep(0.35)
+        return
+
 def play(driver, wl):
+    input("Are you ready? press enter when you are...")
     wordlist = wl
     print(wordlist)
     unused_letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
@@ -93,15 +114,9 @@ def play(driver, wl):
             usable_words = find_usable_words(driver, wordlist)
             best_word = find_best_word(usable_words, unused_letters)
             print(best_word)
+            print(f"Unused words: {unused_letters}")
 
-
-            input_box_xpath = "/html/body/div[2]/div[3]/div[2]/div[2]/form/input"
-
-            input_box = driver.find_element(By.XPATH, input_box_xpath)
-            input_box.send_keys(best_word)
-            time.sleep(0.05)
-            input_box.send_keys(Keys.RETURN)
-            time.sleep(0.35)
+            write_input(driver, best_word, "rage")
 
             index = 0
             for i in wordlist:
@@ -116,8 +131,6 @@ def play(driver, wl):
                 if letter in best_word:
                     unused_letters.remove(letter)
 
-
-
-        if unused_letters == []:
-            unused_letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
-                              'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+            if unused_letters == []:
+                unused_letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+                                  'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
