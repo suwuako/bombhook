@@ -16,7 +16,8 @@ Interested in this project? Contact me on discord @suwa#2340
 
 ## Contributors
 
-me
+suwuako
+chocorho
 
 ## Credits/Special Thanks
 Glizzy Mentality/Isaac for giving me the idea on how to handle repeated words and failed attempts
