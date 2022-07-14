@@ -32,6 +32,7 @@ gnu gpl 3
 ## Contributors
 
 suwuako
+
 chocorho
 
 ## Credits/Special Thanks
