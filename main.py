@@ -12,7 +12,7 @@ from selenium.webdriver.firefox.service import Service
 class start():
     def __init__(self):
         windows = ["win32"]
-        linux = ["linux", "linux32"]
+        linux = ["linux", "linux32", "linux2"]
         platform = sys.platform
 
         path = pathlib.Path().absolute()
