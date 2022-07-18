@@ -10,6 +10,14 @@ Interested in this project? Contact me on discord @suwa#2340
  - selenium 
  - thats it
 
+## How to get it working and stuff
+
+1. install python if you havent already @ https://www.python.org/
+2. git clone this repository or download as zip (big green button top right)
+3. run dependencies.bat or dependencies.sh depending if ur on windows or linux
+4. run main.py either from console or right clicking and click run with idle
+5. yea thats probably it the projects still in its infancy and pretty scuffed gotta fix some stuff
+
 ## TODO
 ~~- check if it works for windows & linux~~
 - legit mode - current WIP
