@@ -12,7 +12,7 @@ from selenium.webdriver.firefox.service import Service
 class start():
     def __init__(self):
         windows = ["win32"]
-        linux = ["linux", "linux2"]
+        linux = ["linux", "linux32", "linux2"]
         platform = sys.platform
 
         path = pathlib.Path().absolute()
@@ -21,11 +21,11 @@ class start():
             driver = fr"{path}\external\geckodriver.exe"
             wordlist = open(f"{path}\external\wordlist", "r")
         elif platform in linux:
-            driver = fr"{path}.external.geckodriver"
-            wordlist = open(f"{path}\external\wordlist", "r")
+            driver = fr"{path}/external/geckodriver"
+            wordlist = open(f"{path}/external/wordlist", "r")
         else:
-            driver = fr"{path}.external.geckodriver"
-            wordlist = open(f"{path}\external\wordlist", "r")
+            driver = fr"{path}/external/geckodriver"
+            wordlist = open(f"{path}/external/wordlist", "r")
 
         self.driver = webdriver.Firefox(service=Service(driver))
         self.wordlist = []

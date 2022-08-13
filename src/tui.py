@@ -9,6 +9,10 @@ def load_room(driver):
     print("To start the script, either enter a room code or manually navigate to a room in the opened browser and click enter.")
     option = input("Room code/Confirmation: ")
 
+    mode = input("What mode would you like to play in (rage/legit) - defaults to legit")
+    if mode != "rage":
+        mode = "legit"
+
     if option != "":
         driver.get(f"https://jklm.fun/{option}")
 

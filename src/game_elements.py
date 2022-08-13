@@ -2,6 +2,8 @@ import selenium
 import time
 import random
 
+import src.lib as lib
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
@@ -46,37 +48,29 @@ def load_rules(driver):
 def your_turn(driver):
     return driver.find_element(By.CLASS_NAME, "selfTurn").is_displayed()
 
-def find_best_word(usable_words, unused_letters):
-    word_ranking = {}
-    for word in usable_words:
-        used_letters = []
-        for letter in unused_letters:
-            if letter in word and letter not in used_letters:
-                used_letters.append(letter)
+def can_join(driver):
+    return driver.find_element(By.CLASS_NAME, "join").is_displayed()
 
-        word_ranking[word] = used_letters
+def write_input(driver, word, mode):
+    input_box_xpath = "/html/body/div[2]/div[3]/div[2]/div[2]/form/input"
+    input_box = driver.find_element(By.XPATH, input_box_xpath)
 
-    highest_letter_len = 0
-    best_words = []
-    for word, letters in word_ranking.items():
-        if len(letters) > highest_letter_len:
-            best_words = [word]
-            highest_letter_len = len(letters)
+    if mode == "rage":
+        input_box.send_keys(word)
+        time.sleep(0.05)
+        input_box.send_keys(Keys.RETURN)
+        time.sleep(0.35)
+        return
 
-        if len(letters) >= highest_letter_len:
-            best_words.append(word)
+    elif mode == "legit":
+        for letter in word:
+            input_box.send_keys(letter)
+            waittime = random.randint(10000,20000) * 0.00001
 
-    print(f"The best word(s) we can use is {best_words} with {highest_letter_len} letters")
-    return random.choice(best_words)
-
-def find_usable_words(driver, wordlist):
-    usable_words = []
-    syllable = get_syllable(driver)
-    for i in wordlist:
-        if syllable in i:
-            usable_words.append(i)
-
-    return usable_words
+            time.sleep(waittime)
+        input_box.send_keys(Keys.RETURN)
+        time.sleep(0.35)
+        return
 
 def play(driver, wl):
     wordlist = wl
@@ -84,24 +78,18 @@ def play(driver, wl):
     unused_letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
                       'U', 'V', 'W', 'X', 'Y', 'Z']
     syllable = "BRUHBRUHBRUHTHISWILLBRUHBRUHBRUH"
-
+	# TODO: rewrite this poopy fart
     while True:
         selfturn = your_turn(driver)
         while selfturn == True:
             syllable = get_syllable(driver)
             print(f"The current syllable is {syllable}.")
-            usable_words = find_usable_words(driver, wordlist)
-            best_word = find_best_word(usable_words, unused_letters)
+            usable_words = lib.find_usable_words(driver, wordlist)
+            best_word = lib.find_best_word(usable_words, unused_letters)
             print(best_word)
+            print(f"Unused words: {unused_letters}")
 
-
-            input_box_xpath = "/html/body/div[2]/div[3]/div[2]/div[2]/form/input"
-
-            input_box = driver.find_element(By.XPATH, input_box_xpath)
-            input_box.send_keys(best_word)
-            time.sleep(0.05)
-            input_box.send_keys(Keys.RETURN)
-            time.sleep(0.35)
+            write_input(driver, best_word, "rage")
 
             index = 0
             for i in wordlist:
@@ -116,8 +104,6 @@ def play(driver, wl):
                 if letter in best_word:
                     unused_letters.remove(letter)
 
-
-
-        if unused_letters == []:
-            unused_letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
-                              'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+            if unused_letters == []:
+                unused_letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+                                  'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
