@@ -12,7 +12,7 @@ Interested in this project? Contact me on discord @suwa#2340
 
 ## How to get it working and stuff
 
-1. install python if you havent already @ https://www.python.org/
+1. install python if you havent already @ https://www.python.org/ (YOU NEED TO ADD PIP TO PATH DURING THE INSTALL OR ELSE IT DOESNT WORK)
 2. git clone this repository or download as zip (big green button top right)
 3. run dependencies.bat or dependencies.sh depending if ur on windows or linux
 4. run main.py either from console or right clicking and click run with idle
