@@ -1,4 +1,6 @@
 # bombhook
+## yeah this project has been abandoned open a pr if you're interested or something 
+
 ## A project to play bombparty (https://jklm.fun/) in the most efficient way possible
 
 Interested in this project? Contact me on discord @suwa#2340
