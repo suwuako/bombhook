@@ -42,11 +42,15 @@ gnu gpl 3
 
 ## Contributors
 
+Programmers:
+
 Isaac
 
-chocorho
+Hamish
 
-hamish
+Advisors:
+
+chocorho
 
 ## Credits/Special Thanks
 Isaac for giving me the idea on how to handle repeated words and failed attempts
