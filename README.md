@@ -42,4 +42,5 @@ gnu gpl 3
 ## Contributors
 
 Isaac - advisor
+
 Chocorho - advisor, programmer
