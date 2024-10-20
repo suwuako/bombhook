@@ -36,11 +36,4 @@ feel free to open a pull request features and issues are more than welcome
 <a href="https://www.youtube.com/watch?v=9OiR680KXfU">1 -> 10 lives in 1 minute<a>
 
 ## License
-
-gnu gpl 3 
-
-## Contributors
-
-Isaac - advisor
-
-Chocorho - advisor, programmer
+GNU GPL 3
